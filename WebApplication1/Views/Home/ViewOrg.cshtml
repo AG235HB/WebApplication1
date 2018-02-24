@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "View";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>VIEW</title>
+</head>
+<body>
+    <div>
+        <h3>Просмотр организации</h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>INN</td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Organisation.Name</td>
+                    <td>@ViewBag.Organisation.INN</td>
+                </tr>
+            </table>
+            <p/>
+            <p>Учредители:</p>
+            <table>
+                <tr>
+                    <td>Имя</td>
+                    <td>Фамилия</td>
+                    <td>Отчество</td>
+                </tr>
+                @foreach(var f in ViewBag.Founders)
+                {
+                    <tr>
+                        <td>@f.Name</td>
+                        <td>@f.Surname</td>
+                        <td>@f.Patronymic</td>
+                    </tr>
+                }
+            </table>
+        </form>
+    </div>
+</body>
+</html>

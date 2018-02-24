@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AddOrg";
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h3>Добавление организации</h3>
+        <form method="post" action="">
+            @*<input type="hidden" value=""*@
+            <table>
+                <tr>
+                    <td>Наименование</td>
+                    <td><input type="text" name="Name"/></td>
+                </tr>
+                <tr>
+                    <td>ИНН</td>
+                    <td><input type="text" name="INN"/></td>
+                </tr>
+                <tr>
+                    <td>Учредители</td>
+                    <td>
+                        <select multiple name="fdr_id">@foreach (var f in ViewBag.Founders)
+                        {
+                            <option value="@f.ID">@f.Surname @f.Name @f.Patronymic</option>
+                        }
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="OK" />
+        </form>
+    </div>
+</body>
+</html>
+

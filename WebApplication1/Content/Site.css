@@ -1,0 +1,59 @@
+﻿body {
+    font-size:12px;
+    font-family:Calibri;
+    background-color:azure;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+nav
+{
+    display:block;
+}
+
+.menu
+{
+    padding-left:10px;
+}
+.menu ul{
+    list-style:none;
+}
+.menu li{
+    display:inline;
+}
+.menu a:hover{
+    color:aqua;
+}
+table{
+    vertical-align:middle;
+    text-align:center;
+}
+.header{
+    font-weight:lighter;
+}
+td{
+    padding-right:10px;
+}
+input{
+    width:150px;
+}
+
+ /*Set padding to keep content from hitting the edges*/ 
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+ /*Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column*/ 
+
+/*.dl-horizontal dt {
+    white-space: normal;
+}*/
+
+ /*Set width on the form input elements since they're 100% wide by default 
+input,
+select,*/
+/*textarea {
+    max-width: 280px;
+}*/
